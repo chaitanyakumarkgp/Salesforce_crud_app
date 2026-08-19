@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "/api",
   withCredentials: true
 });
 
@@ -9,8 +9,7 @@ export const getAuthStatus = () =>
   api.get("/auth/status");
 
 export const login = () => {
-  window.location.href =
-    "http://localhost:5000/api/auth/login";
+  window.location.href = "/api/auth/login";
 };
 
 export const logout = () =>
