@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f7fafc;
+  color: #2d3748;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.navbar {
+  background: #0176d3;
+  color: white;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.navbar button {
+  background: white;
+  color: #0176d3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.page-header p {
+  color: #718096;
+  margin-top: 4px;
+}
+
+.create-button {
+  background: #0176d3;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.selector-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.selector-container label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.selector-container select {
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.selector-container select:focus {
+  border-color: #0176d3;
+  box-shadow: 0 0 0 3px rgba(1,118,211,0.15);
+}
+
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper thead {
+  background: linear-gradient(135deg, #0176d3 0%, #0ea5e9 100%);
+}
+
+.table-wrapper th {
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: white;
+  white-space: nowrap;
+}
+
+.table-wrapper td {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #374151;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.table-wrapper tbody tr {
+  transition: background 0.15s;
+}
+
+.table-wrapper tbody tr:hover {
+  background: #f0f7ff;
+}
+
+.table-wrapper tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-wrapper td:last-child {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.edit-button {
+  padding: 5px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  transition: all 0.15s;
+}
+
+.edit-button:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.delete-button {
+  padding: 5px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  background: #fff5f5;
+  color: #dc2626;
+  transition: all 0.15s;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.end-message {
+  text-align: center;
+  padding: 18px;
+  color: #94a3b8;
+  font-size: 13px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7fafc;
+}
+
+.login-card {
+  background: white;
+  padding: 48px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 420px;
+  width: 100%;
+}
+
+.salesforce-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.login-card h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.login-card p {
+  color: #718096;
+  margin-bottom: 28px;
+}
+
+.login-button {
+  background: #0176d3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.scroll-loader {
+  padding: 25px;
+  text-align: center;
+  color: #718096;
+}
+
+.error-message {
+  background: #fff1f1;
+  color: #c53030;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  background:
+    rgba(15, 23, 42, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.modal {
+  width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header button {
+  border: none;
+  background: transparent;
+  font-size: 25px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px;
+
+  border:
+    1px solid #d7dce5;
+
+  border-radius: 7px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.form-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 7px;
+}
+
+.form-actions button:last-child {
+  background: #0176d3;
+  color: white;
+}
+
+.confirm-dialog {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 32px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.confirm-dialog p {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.confirm-cancel {
+  padding: 9px 22px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: white;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-cancel:hover {
+  background: #f9fafb;
+}
+
+.confirm-delete {
+  padding: 9px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #dc2626;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.confirm-delete:hover {
+  background: #b91c1c;
+}
+
+.required-star {
+  color: #dc2626;
+}
