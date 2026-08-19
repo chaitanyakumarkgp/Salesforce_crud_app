@@ -12,6 +12,11 @@ const app = express();
 
 const isProd = process.env.NODE_ENV === "production";
 
+// Trust Render's reverse proxy so secure cookies work
+if (isProd) {
+  app.set("trust proxy", 1);
+}
+
 // ===============================
 // Middleware
 // ===============================
