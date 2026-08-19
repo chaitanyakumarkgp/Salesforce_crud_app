@@ -61,6 +61,8 @@ app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
     message: "Salesforce CRUD API running",
+    clientUrl: process.env.CLIENT_URL,
+    callbackUrl: process.env.SALESFORCE_CALLBACK_URL
   });
 });
 
